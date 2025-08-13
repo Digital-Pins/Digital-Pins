@@ -5,7 +5,7 @@
 project related to customer service in our digital reality,
 and I very much welcome any talented person who works with me shoulder to 
 shoulder to achieve progress and success in our digital future.
-- 📫 Anyone who wants can communicate with me through e-mail, admin@f-ytech.com 
+- 📫 Anyone who wants can communicate with me through e-mail, admin@4egtrust.com 
 -- because I am very interested in reading the inbox every morning,
 and I like very kind, short and expressive wording
 <!---
