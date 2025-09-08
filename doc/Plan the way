@@ -1,0 +1,94 @@
+# Digital PIN — Design Framework & Roadmap
+
+Purpose: A practical, shared blueprint for the public website, customer portal, and supplier portal—covering UX, design system, security, performance, and a 6‑week delivery path.
+
+## 1) Goals & principles
+- Clear, modern, fast, and secure experiences across all surfaces.
+- One design language (tokens + components) with light/dark readiness.
+- Least privilege and server-side API access; no secrets in browsers.
+- Ship iterative value weekly with measurable KPIs.
+
+## 2) Design system (upgrade-safe and shared)
+- Tokens: colors (brand: #0f4c81, accent: #0ec5a1), spacing scale (4–32), radius (6–12), elevation, typography scale (12–32), transitions.
+- Components (v1): Button, Input, Select, Textarea, Alert, Badge, Card, Modal/Drawer, Tabs, Table, Pagination, Breadcrumb, Navbar, Sidebar, Empty, Skeleton, Toast.
+- Accessibility: color contrast ≥ 4.5:1, focus states, ARIA roles, keyboard nav.
+- Tech: Next.js + TypeScript. Optionally Tailwind + shadcn/ui for speed; export a small ui package for reuse.
+
+## 3) Information architecture
+- Public site (digitalpin.online)
+  - Home, Solutions/Industries, Pricing, About/Team, Contact, Blog/Resources, Docs/FAQ, Legal.
+- Customer portal (app.digitalpin.online)
+  - Auth (login/forgot, 2FA later), Dashboard, Invoices (list/detail/pay), Payments (history), Tickets (create/track), Reports (PDF/Excel), Profile/Organization.
+- Supplier portal (suppliers.digitalpin.online or under app)
+  - Auth, Purchase Orders (list/detail/confirm), Deliveries/GRN, Supplier Invoices, Tickets, Documents/Compliance, Profile/Bank.
+
+## 4) Core UX flows
+- Auth: rate-limit, lockout after failed attempts, CSRF, session httpOnly.
+- Customer invoices: list → detail → pay → receipt → status sync.
+- Tickets: create with subject/message/attachments → updates/notifications.
+- Supplier: PO intake → accept/hold → ship/GRN → upload supplier invoice → reconcile.
+
+## 5) Tech & integration
+- Stack: Next.js 14 (App Router) + TypeScript + Axios + Zod.
+- APIs: Dolibarr REST via server-side routes only (DOL_API_BASE + DOLAPIKEY in server env).
+- Shared UI: small local package or mono-repo workspace later.
+- Environments: dev on port 3210; prod on app.digitalpin.online via Nginx reverse proxy.
+
+## 6) Security (minimum bar)
+- HTTP headers: CSP, X-Frame-Options=DENY, X-Content-Type-Options=nosniff, Referrer-Policy=strict-origin-when-cross-origin, HSTS in prod.
+- Auth: next-auth with secure cookies (httpOnly, SameSite=Lax), rotating secrets, optional 2FA later.
+- RBAC: scope views to owning thirdparty/supplier; enforce in server routes.
+- Secrets: store only in server env files; rotate DOLAPIKEY periodically.
+- WAF/logging: log sensitive events; rate-limit API routes.
+
+## 7) Performance & SEO
+- Budgets: LCP < 2.5s, TTI < 4s, CLS < 0.1.
+- Assets: responsive images, WebP/AVIF, prefetch critical paths, code-splitting.
+- Caching: ISR/SSG for public site; strong cache for static; no cache for API.
+- SEO: sitemap, robots, meta/OG, Schema.org (Organization/Product/FAQ), 404/500 pages.
+
+## 8) Cloudflare (rules we will set)
+- SSL/TLS: Full (strict). Edge: Always Use HTTPS=ON; TLS ≥ 1.2; HTTP/2+HTTP/3=ON; enable HSTS only after HTTPS is verified.
+- Cache Rules:
+  - Bypass cache: `/.well-known/acme-challenge/*`, `/api/*`.
+  - Optionally cache static of public site (respect Cache-Control headers).
+- Security/WAF: don’t strip custom headers; DOLAPIKEY must pass to origin. Optionally allowlist office IPs for `/api/*`.
+- Speed: Rocket Loader OFF for app and suppliers portals.
+- DNS: enable orange cloud after certs are issued.
+
+## 9) Ops & observability
+- Logs/Errors: Sentry or OpenTelemetry; alerts on 5xx spikes and auth failures.
+- Uptime: health checks for site and portals.
+- Releases: blue/green or canary via Nginx upstream toggles; backups before major changes.
+
+## 10) Timeline (6 weeks)
+- W1: Design tokens + core components; skeletons for site and portals.
+- W2: Public site MVP (Home/Solutions/About/Contact) + SEO/Analytics.
+- W3: Customer portal Auth/Dashboard + invoices/tickets (read).
+- W4: Payments + ticket create + export (PDF/Excel) + UI polish.
+- W5: Supplier portal (PO/GRN/Invoice) + notifications.
+- W6: Hardening, performance, observability, docs, staged launch.
+
+## 11) Deliverables
+- Design system docs + shared UI library.
+- Public site production-ready with SEO.
+- Customer portal: invoices/payments/tickets + reports.
+- Supplier portal: PO/GRN/supplier invoice + tickets.
+- Runbooks: deploy, Cloudflare rules, SSL renewal, backups.
+
+## 12) Acceptance criteria
+- Security headers present; no secrets in client; API calls server-only.
+- Performance budgets met on Core Web Vitals.
+- Role-based data scoping validated.
+- Cloudflare rules in place; orange cloud enabled post-SSL.
+
+## 13) Next steps (action checklist)
+- [ ] Confirm supplier portal domain (suppliers.digitalpin.online vs under app).
+- [ ] Finalize brand kit (logo SVG, color tokens, typography) and import into UI.
+- [ ] Add Tailwind + shadcn/ui to portals (or keep current minimal CSS and iterate).
+- [ ] Create systemd service for portal on port 3210; enable and monitor.
+- [ ] Set DOL_API_KEY in `.env.production.local` on server; rotate quarterly.
+- [ ] Cloudflare: add rules (bypass API & ACME), set SSL Full (strict), disable Rocket Loader for apps.
+- [ ] Smoke tests: ERP API explorer 200, app dashboard loads, invoices list, ticket creation.
+
+— Living document. Owner: Engineering. Updated: 2025‑09‑06.
