@@ -1,0 +1,88 @@
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+  --fg: #e7ecff;
+  color-scheme: light dark;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: radial-gradient(60% 60% at 70% 20%, rgba(55,120,255,0.15) 0%, rgba(11,16,32,1) 60%), var(--bg);
+  color: var(--fg);
+}
+
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Exo 2 font for partner text labels */
+@font-face {
+  font-family: 'Exo 2';
+  src: url('/assets/web-font/Exo_2,Roboto_Condensed,Titillium_Web/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-exo {
+  font-family: 'Exo 2', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Arabic display font (variable) - Noto Kufi Arabic as a modern, legible choice */
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  /* Use available variable TTF; add WOFF2 later if present */
+  src: url('/assets/web-font/Noto_Kufi_Arabic/NotoKufiArabic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Static fallbacks for broader compatibility */
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('/assets/web-font/Noto_Kufi_Arabic/static/NotoKufiArabic-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Kufi Arabic';
+  src: url('/assets/web-font/Noto_Kufi_Arabic/static/NotoKufiArabic-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-ar {
+  font-family: 'Noto Kufi Arabic', 'Tajawal', 'Cairo', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans Arabic', sans-serif;
+}
+
+/* RTL utilities */
+.rtl { direction: rtl; }
+.rtl .text-start { text-align: start; }
+.rtl .text-end { text-align: end; }
+
+/* Logo glow wrapper to enhance visibility */
+.logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 0 0 6px rgba(55,120,255,0.08),
+    0 10px 30px rgba(55,120,255,0.20);
+}
+.logo-wrap img {
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.35));
+}

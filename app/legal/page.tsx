@@ -1,0 +1,124 @@
+"use client";
+
+import { useState } from "react";
+
+const sections = [
+  {
+    id: "legal-notice",
+    title: "Legal Notice",
+    content:
+      "Digital PIN LLC operates as a registered limited liability company in Cairo, Egypt. We align with EU and international hosting compliance requirements, providing clients with transparent corporate information and accountability.",
+  },
+  {
+    id: "data-privacy",
+    title: "Data Privacy",
+    content:
+      "We implement GDPR-inspired safeguards to protect personal and business data. Our approach emphasizes transparency, encryption, and responsible data handling across all Digital PIN and Hetzner-managed infrastructures.",
+  },
+  {
+    id: "system-policies",
+    title: "System Policies",
+    content:
+      "Our systems must remain stable and secure. Misuse, spamming, or illegal activity is strictly prohibited. We follow Hetzner’s engineering-driven principles to ensure fairness and resilience.",
+  },
+  {
+    id: "dedicated-server",
+    title: "Dedicated Server",
+    content:
+      "Dedicated servers provide guaranteed performance and isolation. Clients are responsible for security at the application level, while we ensure hardware and network reliability.",
+  },
+  {
+    id: "cloud-vserver",
+    title: "Cloud & vServer",
+    content:
+      "Our cloud and virtual servers offer scalable performance. Clients are expected to use resources responsibly while adhering to compliance and security best practices.",
+  },
+  {
+    id: "managed-server",
+    title: "Managed Server",
+    content:
+      "For managed servers, Digital PIN oversees updates, monitoring, and availability, reducing client operational load. Responsibilities and guarantees are clearly defined in SLAs.",
+  },
+  {
+    id: "webhosting",
+    title: "Webhosting Service",
+    content:
+      "Webhosting packages include standard availability, SSL, and email. Usage is bound by lawful and ethical content publishing practices.",
+  },
+  {
+    id: "storage-box",
+    title: "Storage Box",
+    content:
+      "Storage services are intended for backups and archives. Clients remain responsible for the legality of stored content and must follow international transfer regulations.",
+  },
+  {
+    id: "terms",
+    title: "Terms and Conditions",
+    content:
+      "Our terms reflect commitment to reliability, transparency, and Hetzner-aligned service delivery. By using our services, clients agree to respect these shared principles.",
+  },
+  {
+    id: "dsa",
+    title: "Digital Services Act",
+    content:
+      "As a responsible provider, Digital PIN complies with the EU Digital Services Act, ensuring transparent communication, complaint mechanisms, and protection of user rights.",
+  },
+  {
+    id: "withdrawal",
+    title: "Withdrawal Form",
+    content:
+      "Clients may withdraw or cancel services within legal timeframes. This section outlines the process to ensure fairness and compliance.",
+  },
+  {
+    id: "tld",
+    title: "TLD Allocating Terms",
+    content:
+      "Domain registration follows ICANN and Hetzner allocation guidelines. Clients agree to uphold naming policies and ensure accurate domain records.",
+  },
+];
+
+export default function LegalPage() {
+  const [active, setActive] = useState("legal-notice");
+
+  return (
+    <div className="flex min-h-screen bg-gray-50">
+      {/* Sidebar */}
+      <aside className="w-64 bg-white/80 backdrop-blur-md border-r p-4 shadow-md">
+        <h2 className="text-lg font-semibold mb-4">Help Desk</h2>
+        <ul className="space-y-2">
+          {sections.map((s) => (
+            <li key={s.id}>
+              <button
+                onClick={() => setActive(s.id)}
+                className={`w-full text-left px-3 py-2 rounded-lg transition ${
+                  active === s.id
+                    ? "bg-brand-500 text-white font-semibold shadow"
+                    : "hover:bg-gray-100 text-gray-700"
+                }`}
+              >
+                {s.title}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </aside>
+
+      {/* Content */}
+      <main className="flex-1 p-6">
+        {sections.map(
+          (s) =>
+            active === s.id && (
+              <div key={s.id} className="shadow-lg rounded-2xl glass">
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-4 text-brand-600">
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">{s.content}</p>
+                </div>
+              </div>
+            )
+        )}
+      </main>
+    </div>
+  );
+}

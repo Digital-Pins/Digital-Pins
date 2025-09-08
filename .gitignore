@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Next.js build outputs
+.next/
+out/
+.next-standalone/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Editors/OS
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Misc
+coverage/
+dist/
+*.tgz
