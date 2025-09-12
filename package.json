@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "next dev -p ${PORT:-3220}",
     "build": "next build",
-    "start": "next start -p ${PORT:-3220}"
+    "start": "next start -p ${PORT:-3220}",
+    "preinstall": "sh -c \"rm -rf app/ar \"\"app/(en)\"\" \"\"app/projects/[slug]\"\" || true\"",
+    "postinstall": "sh -c \"rm -rf app/ar \"\"app/(en)\"\" \"\"app/projects/[slug]\"\" || true\"",
+    "prebuild": "sh -c \"rm -rf app/ar \"\"app/(en)\"\" \"\"app/projects/[slug]\"\" || true\""
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
