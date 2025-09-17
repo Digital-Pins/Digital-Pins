@@ -1,0 +1,13 @@
+s:923:"
+<!-- Box box_birthdays start -->
+<div class="box divboxtable boxdraggable" id="boxto_2">
+<table summary="boxtable2" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Birthdays of this month (users)"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Birthdays of this month (users)</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose2"></span><input type="hidden" id="boxlabelentry2" value="Birthdays of this month (users)"></div></th></tr>
+<tr class="oddeven"><td class="center">
+<span class="opacitymedium">None</span></td>
+</tr>
+</table>
+</div>
+<!-- Box box_birthdays end -->
+
+";

@@ -1,0 +1,13 @@
+s:999:"
+<!-- Box box_supplier_orders_awaiting_reception start -->
+<div class="box divboxtable boxdraggable" id="boxto_30">
+<table summary="boxtable30" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Supplier orders awaiting reception"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Supplier orders awaiting reception</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose30"></span><input type="hidden" id="boxlabelentry30" value="Supplier orders awaiting reception"></div></th></tr>
+<tr class="oddeven"><td class="center">
+<span class="opacitymedium">No purchase order</span></td>
+</tr>
+</table>
+</div>
+<!-- Box box_supplier_orders_awaiting_reception end -->
+
+";

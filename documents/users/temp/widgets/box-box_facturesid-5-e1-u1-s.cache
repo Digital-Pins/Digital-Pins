@@ -1,0 +1,10 @@
+s:1142:"
+<!-- Box box_factures start -->
+<div class="box divboxtable boxdraggable" id="boxto_5">
+<table summary="boxtable5" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Customer Invoices: last 3 modified&hellip;"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Customer Invoices: last 3 modified…</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose5"></span><input type="hidden" id="boxlabelentry5" value="Customer Invoices: last 3 modified&lt;span class=&quot;badge&quot;&gt;...&lt;/span&gt;"></div></th></tr>
+<tr><td colspan="2" class="center"><span class="opacitymedium">No customer invoices recorded </span><a href="/compta/facture/card.php?action=create"><span class="fas fa-plus-circle" style="" title="New" pictofixedwidth></span></a></td></tr></table>
+</div>
+<!-- Box box_factures end -->
+
+";

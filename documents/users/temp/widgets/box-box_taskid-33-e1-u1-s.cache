@@ -1,0 +1,81 @@
+s:4468:"
+<!-- Box box_task start -->
+<div class="box divboxtable boxdraggable" id="boxto_33">
+<table summary="boxtable33" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Currently open tasks"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Currently open tasks</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-filter opacitymedium marginleftonly linkobject boxfilter" style="" title="Filter" id="idsubimgprojettask"></span><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose33"></span><input type="hidden" id="boxlabelentry33" value="Currently open tasks"></div></th></tr>
+<tr class="nohover showiffilterprojettask hideobject"><td class="nohover">
+
+<div id="ancor-idfilterprojettask" style="display: block; position: absolute; margin-top: -100px"></div>
+<div id="idfilterprojettask" class="center" >
+<form class="flat " method="POST" action="/index.php#ancor-idfilterprojettask">
+<input type="hidden" name="token" value="a2f5c65c5658d39778c995db896d320d">
+<select id="DOLUSER_boxfilter_task" class="flat DOLUSER_boxfilter_task minwidth75 selectformat" name="DOLUSER_boxfilter_task" >
+<option value="all" selected>No filter</option>
+<option value="im_task_contact">which I'm linked to</option>
+<option value="im_project_contact">which I'm linked to project</option>
+</select>
+<!-- JS CODE TO ENABLE select2 for id = DOLUSER_boxfilter_task -->
+		<script>
+			$(document).ready(function () {
+				$('#DOLUSER_boxfilter_task').select2({
+					dir: 'ltr',		width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: (typeof select2arrayoflanguage === 'undefined') ? 'en' : select2arrayoflanguage,
+					matcher: function (params, data) {
+						if ($.trim(params.term) === "") {
+							return data;
+						}
+						keywords = (params.term).split(" ");
+						for (var i = 0; i < keywords.length; i++) {
+							if (((data.text).toUpperCase()).indexOf((keywords[i]).toUpperCase()) == -1) {
+								return null;
+							}
+						}
+						return data;
+					},
+					theme: 'default minwidth75',		/* to add css on generated html components */
+					containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new <span class="select2-selection...> tag */
+					selectionCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new <span class="select2-selection...> tag */
+					dropdownCssClass: 'ui-dialog',
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 <li> tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+						//console.log("data html is "+$(data.element).attr("data-html"));
+						if (data.id == '-1' && $(data.element).attr("data-html") == undefined) {
+							return '&nbsp;';
+						}
+						if ($(data.element).attr("data-html") != undefined) {
+							/* If property html set, we decode html entities and use this. */
+							/* Note that HTML content must have been sanitized from js with dol_escape_htmltag(xxx, 0, 0, '', 0, 1) when building the select option. */
+							if (typeof htmlEntityDecodeJs === "function") {
+								return htmlEntityDecodeJs($(data.element).attr("data-html"));
+							}
+						}
+						return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						if (selection.id == '-1') return '<span class="placeholder">'+selection.text+'</span>';
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					}
+				});
+});
+</script>
+<button type="submit" class="button buttongen button-save">Refresh</button></form>
+</div>
+<script nonce="3d87823d" type="text/javascript">
+						jQuery(document).ready(function() {
+							jQuery("#idsubimgprojettask").click(function() {
+								jQuery(".showiffilterprojettask").toggle();
+							});
+						});
+						</script><script nonce="3d87823d">date = new Date(); date.setTime(date.getTime()+(30*86400000)); document.cookie = "DOLUSER_boxfilter_task=all; expires= " + date.toGMTString() + "; path=/ ; SameSite=Lax"; </script>
+</td>
+</tr>
+</table>
+</div>
+<!-- Box box_task end -->
+
+";

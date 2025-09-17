@@ -1,0 +1,10 @@
+s:1060:"
+<!-- Box box_boms start -->
+<div class="box divboxtable boxdraggable" id="boxto_36">
+<table summary="boxtable36" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Latest 3 BOMs which were modified"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Latest 3 BOMs which were modified</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose36"></span><input type="hidden" id="boxlabelentry36" value="Latest 3 BOMs which were modified"></div></th></tr>
+<tr><td colspan="2" class="center"><span class="opacitymedium">No sales orders recorded </span><a href="/bom/bom_card.php?action=create"><span class="fas fa-plus-circle" style="" title="New" pictofixedwidth></span></a></td></tr></table>
+</div>
+<!-- Box box_boms end -->
+
+";

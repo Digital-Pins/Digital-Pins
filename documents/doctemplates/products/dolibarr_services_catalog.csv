@@ -1,0 +1,9 @@
+Category,Service Name,Reference,Type,Description,Supplier,Price (HT),Status
+Hosting,Managed ERP Hosting,PIN-SRV-001,Service,Hosting and maintaining ERP instances on dedicated Hetzner servers.,Hetzner,150,Active
+Hosting,Cloud Backup & Disaster Recovery,PIN-SRV-002,Service,Backup and disaster recovery using Oracle Cloud Infrastructure.,Oracle Cloud,100,Active
+ERP,ERP Customization & Modules,PIN-SRV-003,Service,"Customization of ERP modules, workflows, and integration with third-party apps.",Internal,200,Active
+ERP,ERP Integration with AI Tools,PIN-SRV-004,Service,Enhance ERP with AI-powered addons and automations powered by OpenAI APIs.,OpenAI,250,Active
+Security,DNS & Edge Security,PIN-SRV-005,Service,"Managed DNS, CDN, and DDoS protection through Cloudflare.",Cloudflare,120,Active
+Security,Compliance & Security Audits,PIN-SRV-006,Service,"Regular audits, compliance checks, and penetration testing.",Internal,300,Active
+E-Learning,Managed E-Learning Platform,PIN-SRV-007,Service,Deployment and customization of e-learning platforms like PinLearn.,Internal,180,Active
+Support,Ongoing Support & Maintenance,PIN-SRV-008,Service,24/7 support and maintenance services for ERP and related platforms.,Internal,80,Active

@@ -1,0 +1,25 @@
+s:1742:"
+<!-- Box box_lastlogin start -->
+<div class="box divboxtable boxdraggable" id="boxto_1">
+<table summary="boxtable1" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th colspan="2" title="Login Information"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Login Information</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose1"></span><input type="hidden" id="boxlabelentry1" value="Login Information"></div></th></tr>
+<tr class="oddeven"><td class="tdoverflowmax150 maxwidth150onsmartphone">
+User</td>
+<td class="tdoverflowmax150 maxwidth150onsmartphone">
+<a href="/user/card.php?id=1" title="tocomplete" data-params="{&quot;id&quot;:&quot;1&quot;,&quot;objecttype&quot;:&quot;user&quot;,&quot;infologin&quot;:0,&quot;option&quot;:&quot;&quot;,&quot;hidethirdpartylogo&quot;:0}" class="classforajaxtooltip valignmiddle"><!-- picto photo user --><span class="nopadding userimg valignmiddle" style="margin-right: 3px;"><img class="photouserphoto userphoto" alt=""  src="/public/theme/common/user_anonymous.png"></span><span class="nopadding usertext valignmiddle">SuperAdmin</span></a></td>
+</tr>
+<tr class="oddeven"><td>
+Previous login</td>
+<td>
+09/16/2025 03:23 PM - <span class="opacitymedium">From IP 2a09:bac5:30bf:1eb::31:1bd</span></td>
+</tr>
+<tr class="oddeven"><td>
+Last password change</td>
+<td>
+<span class="opacitymedium">Unknown</span></td>
+</tr>
+</table>
+</div>
+<!-- Box box_lastlogin end -->
+
+";

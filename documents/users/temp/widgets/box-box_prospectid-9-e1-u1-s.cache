@@ -1,0 +1,19 @@
+s:1847:"
+<!-- Box box_prospect start -->
+<div class="box divboxtable boxdraggable" id="boxto_9">
+<table summary="boxtable9" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th colspan="4" title="Prospects: last 3 modified&lt;span class=&quot;badge&quot;&gt;...&lt;/span&gt;"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Prospects: last 3 modified<a class="paddingleft" href="/societe/list.php?type=p&sortfield=s.tms&sortorder=DESC"><span class="badge">...</span></a></div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose9"></span><input type="hidden" id="boxlabelentry9" value="Prospects: last 3 modified&lt;span class=&quot;badge&quot;&gt;...&lt;/span&gt;"></div></th></tr>
+<tr class="oddeven"><td class="tdoverflowmax150">
+<a href="/societe/card.php?socid=1" title="tocomplete" data-params="{&quot;id&quot;:&quot;1&quot;,&quot;objecttype&quot;:&quot;societe&quot;,&quot;option&quot;:&quot;&quot;,&quot;nofetch&quot;:1}" class="classforajaxtooltip refurl valignmiddle"><span class="fas fa-building paddingright" style=" color: #6c6aa8;"></span>ghada (contract)</a></td>
+<td class="center nowraponall" title="Modification date: 09/15/2025 10:22 AM">
+09/15/2025</td>
+<td class="right" width="18">
+<img height="14" src="/theme/eldy/img/stcomm0.png" alt="" title="Never contacted" class="inline-block valignmiddle"></td>
+<td class="right" width="18">
+<span class="badge badge-dot badge-status4 classfortooltip badge-status" title="Open" aria-label="Open"></span></td>
+</tr>
+</table>
+</div>
+<!-- Box box_prospect end -->
+
+";

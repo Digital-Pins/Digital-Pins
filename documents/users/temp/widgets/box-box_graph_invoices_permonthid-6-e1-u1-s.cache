@@ -1,0 +1,75 @@
+s:5865:"
+<!-- Box box_graph_invoices_permonth start -->
+<div class="box divboxtable boxdraggable" id="boxto_6">
+<table summary="boxtable6" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Customer Invoices per month"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Customer Invoices per month</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-filter opacitymedium marginleftonly linkobject boxfilter" style="" title="Filter" id="idsubimginvoicespermonth"></span><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose6"></span><input type="hidden" id="boxlabelentry6" value="Customer Invoices per month &lt;span class=&quot;opacitymedium fas fa-chart-bar&quot;&gt;&lt;/span&gt;"></div></th></tr>
+<tr class="oddeven nohover"><td class="nohover center">
+
+<script nonce="3d87823d" type="text/javascript">
+					jQuery(document).ready(function() {
+						jQuery("#idsubimginvoicespermonth").click(function() {
+							jQuery("#idfilterinvoicespermonth").toggle();
+						});
+					});
+					</script><div class="center hideobject" id="idfilterinvoicespermonth"><form class="flat formboxfilter" method="POST" action="/index.php"><input type="hidden" name="token" value="a2f5c65c5658d39778c995db896d320d"><input type="hidden" name="action" value="refresh_invoicespermonth"><input type="hidden" name="page_y" value=""><input type="hidden" name="DOL_AUTOSET_COOKIE" value="DOLUSER_box_invoicespermonth:year,shownb,showtot"><input type="checkbox" id="DOLUSER_box_invoicespermonth_shownb" name="DOLUSER_box_invoicespermonth_shownb" checked><label for="DOLUSER_box_invoicespermonth_shownb"> No. of invoices per month</label> &nbsp; <input type="checkbox" id="DOLUSER_box_invoicespermonth_showtot" name="DOLUSER_box_invoicespermonth_showtot" checked><label for="DOLUSER_box_invoicespermonth_showtot"> Amount of invoices by month (net of tax)</label><br>Year <input class="flat" size="4" type="text" name="DOLUSER_box_invoicespermonth_year" value="2025"><input type="image" class="reposition inline-block valigntextbottom" alt="Refresh" src="/theme/eldy/img/refresh.png"></form></div><div class="fichecenter"><div class="fichehalfleft"><!-- Build using chart -->
+<div class="center dolgraphtitle dolgraphtitlecssboxes">No. of invoices per month</div><div id="placeholder_invoicesnbinyear_2025_png" style="min-height: 192px; max-height: 292px; width:256px;" class="dolgraphchart dolgraph dolgraphcssboxes center">
+<canvas id="canvas_invoicesnbinyear_2025_png"></canvas></div>
+<script nonce="3d87823d" id="invoicesnbinyear_2025_png">
+
+var options = { maintainAspectRatio: false, aspectRatio: 2.5, plugins: { 
+legend: { maxWidth: 128, labels: { boxWidth: 15 }, position: 'top' },
+}, 
+};
+				var ctx = document.getElementById("canvas_invoicesnbinyear_2025_png").getContext("2d");
+				var chart = new Chart(ctx, {
+			    // The type of chart we want to create
+    			type: 'bar',
+				// Configuration options go here
+    			options: options,
+				data: {
+					labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+					datasets: [
+{dolibarrinfo: 'y_0', label: '2023', pointStyle: 'circle', fill: true, borderWidth: '1', borderColor: 'rgb(137, 86, 161, 0.9)', borderSkipped: 'start', backgroundColor: 'rgb(137, 86, 161, 0.9)', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+, 
+{dolibarrinfo: 'y_1', label: '2024', pointStyle: 'circle', fill: true, borderWidth: '1', borderColor: 'rgb(60, 147, 183, 0.9)', borderSkipped: 'start', backgroundColor: 'rgb(60, 147, 183, 0.9)', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+, 
+{dolibarrinfo: 'y_2', label: '2025', pointStyle: 'circle', fill: true, borderWidth: '1', borderColor: 'rgb(250, 190, 80, 0.9)', borderSkipped: 'start', backgroundColor: 'rgb(250, 190, 80, 0.9)', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+]
+}
+});
+</script>
+</div><div class="fichehalfright"><!-- Build using chart -->
+<div class="center dolgraphtitle dolgraphtitlecssboxes">Amount of invoices by month (net of tax)</div><div id="placeholder_invoicesamountinyear_2025_png" style="min-height: 192px; max-height: 292px; width:256px;" class="dolgraphchart dolgraph dolgraphcssboxes center">
+<canvas id="canvas_invoicesamountinyear_2025_png"></canvas></div>
+<script nonce="3d87823d" id="invoicesamountinyear_2025_png">
+
+var options = { maintainAspectRatio: false, aspectRatio: 2.5, plugins: { 
+legend: { maxWidth: 128, labels: { boxWidth: 15 }, position: 'top' },
+}, 
+};
+				var ctx = document.getElementById("canvas_invoicesamountinyear_2025_png").getContext("2d");
+				var chart = new Chart(ctx, {
+			    // The type of chart we want to create
+    			type: 'bar',
+				// Configuration options go here
+    			options: options,
+				data: {
+					labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+					datasets: [
+{dolibarrinfo: 'y_0', label: '2023', pointStyle: 'circle', fill: true, borderWidth: '1', borderColor: 'rgb(137, 86, 161, 0.9)', borderSkipped: 'start', backgroundColor: 'rgb(137, 86, 161, 0.9)', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+, 
+{dolibarrinfo: 'y_1', label: '2024', pointStyle: 'circle', fill: true, borderWidth: '1', borderColor: 'rgb(60, 147, 183, 0.9)', borderSkipped: 'start', backgroundColor: 'rgb(60, 147, 183, 0.9)', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+, 
+{dolibarrinfo: 'y_2', label: '2025', pointStyle: 'circle', fill: true, borderWidth: '1', borderColor: 'rgb(250, 190, 80, 0.9)', borderSkipped: 'start', backgroundColor: 'rgb(250, 190, 80, 0.9)', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+]
+}
+});
+</script>
+</div></div>
+</td>
+</tr>
+</table>
+</div>
+<!-- Box box_graph_invoices_permonth end -->
+
+";

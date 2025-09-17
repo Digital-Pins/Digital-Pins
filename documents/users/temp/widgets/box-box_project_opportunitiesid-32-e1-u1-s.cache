@@ -1,0 +1,36 @@
+s:2272:"
+<!-- Box box_project_opportunities start -->
+<div class="box divboxtable boxdraggable" id="boxto_32">
+<table summary="boxtable32" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th colspan="6" title="Open opportunities"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Open opportunities</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose32"></span><input type="hidden" id="boxlabelentry32" value="Open opportunities"></div></th></tr>
+<tr class="oddeven"><td class="nowraponall">
+<a href="/projet/card.php?id=1" title="tocomplete" data-params="{&quot;id&quot;:&quot;1&quot;,&quot;objecttype&quot;:&quot;project&quot;,&quot;moreinpopup&quot;:&quot;&quot;,&quot;option&quot;:&quot;&quot;}" class="classforajaxtooltip"><span class="fas fa-project-diagram  em088 infobox-project pictofixedwidth em088" style=""></span>1002-09-PIN-15/PJ</a></td>
+<td class="tdoverflowmax150 maxwidth200onsmartphone">
+ERP Host Servers</td>
+<td class="tdoverflowmax100">
+<a href="/societe/card.php?socid=2" title="tocomplete" data-params="{&quot;id&quot;:&quot;2&quot;,&quot;objecttype&quot;:&quot;societe&quot;,&quot;option&quot;:&quot;&quot;,&quot;nofetch&quot;:1}" class="classforajaxtooltip refurl valignmiddle"><span class="fas fa-building paddingright" style=" color: #6c6aa8;"></span>Hetzner (Hetzner)</a></td>
+<td class="amount right nowraponall">
+40.00</td>
+<td class="nowraponall">
+Qualification <span class="opacitymedium small">(20%)</span></td>
+<td class="right">
+<span class="badge badge-dot badge-status0 classfortooltip badge-status" title="Draft" aria-label="Draft"></span></td>
+</tr>
+<tr class="liste_total_wrap"><td class="liste_total">
+Total&nbsp;Open opportunities</td>
+<td class="right liste_total" >
+1&nbsp;Projects</td>
+<td class="liste_total">
+&nbsp;</td>
+<td class="liste_total">
+&nbsp;</td>
+<td class="liste_total">
+&nbsp;</td>
+<td class="liste_total">
+&nbsp;</td>
+</tr>
+</table>
+</div>
+<!-- Box box_project_opportunities end -->
+
+";

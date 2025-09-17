@@ -1,0 +1,10 @@
+s:997:"
+<!-- Box box_project start -->
+<div class="box divboxtable boxdraggable" id="boxto_31">
+<table summary="boxtable31" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Open projects"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Open projects</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose31"></span><input type="hidden" id="boxlabelentry31" value="Open projects"></div></th></tr>
+<tr><td colspan="2" class="center"><span class="opacitymedium">No open projects </span><a href="/projet/card.php?action=create"><span class="fas fa-plus-circle" style="" title="New" pictofixedwidth></span></a></td></tr></table>
+</div>
+<!-- Box box_project end -->
+
+";

@@ -1,0 +1,17 @@
+# Node / Next.js
+node_modules/
+.next/
+*.log
+.env*
+
+# PHP/Dolibarr
+htdocs/documents/
+htdocs/conf/conf.php
+htdocs/custom/
+vendor/
+composer.lock
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

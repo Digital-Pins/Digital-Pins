@@ -1,0 +1,13 @@
+s:1009:"
+<!-- Box box_customers_outstanding_bill_reached start -->
+<div class="box divboxtable boxdraggable" id="boxto_7">
+<table summary="boxtable7" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Customers with maximum outstanding exceeded"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Customers with maximum outstanding exceeded</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose7"></span><input type="hidden" id="boxlabelentry7" value="Customers with maximum outstanding exceeded"></div></th></tr>
+<tr class="oddeven"><td class="center">
+<span class="opacitymedium">None</span></td>
+</tr>
+</table>
+</div>
+<!-- Box box_customers_outstanding_bill_reached end -->
+
+";

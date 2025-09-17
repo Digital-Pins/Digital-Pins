@@ -1,0 +1,10 @@
+s:1269:"
+<!-- Box box_clients start -->
+<div class="box divboxtable boxdraggable" id="boxto_8">
+<table summary="boxtable8" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Customers: last 3 modified&lt;span class=&quot;badge&quot;&gt;...&lt;/span&gt;"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Customers: last 3 modified<a class="paddingleft" href="/societe/list.php?type=c&sortfield=s.tms&sortorder=DESC"><span class="badge">...</span></a></div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose8"></span><input type="hidden" id="boxlabelentry8" value="Customers: last 3 modified&lt;span class=&quot;badge&quot;&gt;...&lt;/span&gt;"></div></th></tr>
+<tr><td colspan="2" class="center"><span class="opacitymedium">No customers recorded </span><a href="/societe/card.php?action=create&type=c"><span class="fas fa-plus-circle" style="" title="New" pictofixedwidth></span></a></td></tr></table>
+</div>
+<!-- Box box_clients end -->
+
+";

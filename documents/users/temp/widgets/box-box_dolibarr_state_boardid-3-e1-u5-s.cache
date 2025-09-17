@@ -1,0 +1,15 @@
+s:1928:"
+<!-- Box box_dolibarr_state_board start -->
+<div class="box divboxtable boxdraggable" id="boxto_3">
+<table summary="boxtable3" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Database Statistics"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Database Statistics</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose3"></span><input type="hidden" id="boxlabelentry3" value="Database Statistics"></div></th></tr>
+<tr class="nohover"><td class="tdwidgetstate center">
+
+<a href="/user/list.php" class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstats"><span class="boxstatstext" title="Users">Users</span><br><span class="boxstatsindicator"><span class="fas fa-user infobox-adherent inline-block" style=""></span> 4</span></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a><a class="boxstatsindicator thumbstat nobold nounderline"><div class="boxstatsempty"></div></a>
+</td>
+</tr>
+</table>
+</div>
+<!-- Box box_dolibarr_state_board end -->
+
+";

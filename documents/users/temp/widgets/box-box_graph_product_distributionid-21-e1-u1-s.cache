@@ -1,0 +1,47 @@
+s:3237:"
+<!-- Box box_graph_product_distribution start -->
+<div class="box divboxtable boxdraggable" id="boxto_21">
+<table summary="boxtable21" class="noborder boxtable centpercent">
+<tr class="liste_titre box_titre"><th title="Products/Services Distribution - Year: 2025"><div class="tdoverflowmax400 maxwidth250onsmartphone float">Products/Services Distribution - Year: 2025</div><div class="nocellnopadd boxclose floatright nowraponall"><span class="fas fa-filter opacitymedium marginleftonly linkobject boxfilter" style="" title="Filter" id="idsubimgproductdistribution"></span><span class="fas fa-arrows-alt opacitymedium boxhandle hideonsmartphone cursormove marginleftonly" style="" title="Move widget"></span><span class="fas fa-times opacitymedium boxclose cursorpointer marginleftonly" style="" title="Remove widget from your dashboard" rel="x:y" id="imgclose21"></span><input type="hidden" id="boxlabelentry21" value="Products/Services Distribution - Year: 2025 &lt;span class=&quot;opacitymedium fas fa-chart-bar&quot;&gt;&lt;/span&gt;"></div></th></tr>
+<tr class="oddeven nohover"><td class="nohover center">
+
+<script nonce="3d87823d" type="text/javascript">
+				jQuery(document).ready(function() {
+					jQuery("#idsubimgproductdistribution").click(function() {
+						jQuery("#idfilterproductdistribution").toggle();
+					});
+				});
+			</script><div class="center hideobject" id="idfilterproductdistribution"><form class="flat formboxfilter" method="POST" action="/index.php"><input type="hidden" name="token" value="a2f5c65c5658d39778c995db896d320d"><input type="hidden" name="action" value="refresh_productdistribution"><input type="hidden" name="page_y" value=""><input type="hidden" name="DOL_AUTOSET_COOKIE" value="DOLUSER_box_productdistribution:year,showinvoicenb,showpropalnb,showordernb"><input type="checkbox" name="DOLUSER_box_productdistribution_showinvoicenb" checked> Customers invoices &nbsp; <br>Year <input class="flat" size="4" type="text" name="DOLUSER_box_productdistribution_year" value="2025"><input type="image" class="reposition inline-block valigntextbottom" alt="Refresh" src="/theme/eldy/img/refresh.png"></form></div><!-- Build using chart -->
+<div class="center dolgraphtitle dolgraphtitlecssboxes">On Invoices</div><div id="placeholder_prodserforinvoice_2025_png" style="min-height: 150px; max-height: 250px; width:320px;" class="dolgraphchart dolgraphcharpie dolgraph dolgraphcssboxes center">
+<canvas id="canvas_prodserforinvoice_2025_png"></canvas></div>
+<script nonce="3d87823d" id="prodserforinvoice_2025_png">
+
+var options = { maintainAspectRatio: false, aspectRatio: 2.5, legend: { labels: { boxWidth: 15 }, position: 'right' }, 
+plugins: { legend: { labels: { boxWidth: 15 }, position: 'right' }, 
+ }, 
+elements: { arc: {
+backgroundColor: ['rgb(220, 220, 220)'], 
+} } };
+
+				var ctx = document.getElementById("canvas_prodserforinvoice_2025_png").getContext("2d");
+				var chart = new Chart(ctx, {
+			    // The type of chart we want to create
+    			type: 'doughnut',
+				// Configuration options go here
+    			options: options,
+				data: {
+					labels: ['None'],
+					datasets: [{
+  data: [1]}
+]
+}
+});
+</script>
+
+</td>
+</tr>
+</table>
+</div>
+<!-- Box box_graph_product_distribution end -->
+
+";
