@@ -32,3 +32,5 @@ dist/
 *.tsbuildinfo
 *.tar.gz
 *.zip
+tsconfig.json.bak
+tsconfig.json.bak

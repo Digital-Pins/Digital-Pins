@@ -1,4 +1,0 @@
-export default function HomePage() {
-  return (
-    <main className="container mx-auto px-6 py-12">\n      <h1 className="text-3xl font-semibold mb-4">DigitalPin</h1>\n      <p className="text-gray-300">\n        We help SMBs cross the bridge to digital operations — Dolibarr ERP, customer portals, and secure deployments.\n      </p>\n    </main>\n  )
-}
