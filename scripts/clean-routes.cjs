@@ -21,5 +21,7 @@ const targets = [
   try {
     await fs.rm(path.join(root, ".next"), { recursive: true, force: true });
     console.log("removed: .next");
-  } catch (e) {}
+  } catch (e) {
+    // ignore
+  }
 })();

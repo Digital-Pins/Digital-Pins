@@ -1,14 +1,22 @@
-export const metadata = {
-	title: 'Terms — Digital PIN',
-	description: 'Terms and conditions.'
-}
+import { getContentPage } from "@/lib/contentPages";
 
-export default function TermsPage(){
+export const metadata = {
+	title: "Terms — Digital PIN",
+	description: "Terms and conditions.",
+};
+
+export default async function TermsPage() {
+	const page = await getContentPage("terms");
 	return (
 		<main className="container mx-auto px-6 py-10">
-			<h1 className="text-3xl font-bold text-brand-600">Terms & Conditions</h1>
-			<p className="mt-3 text-gray-600">Terms content will be provided here.</p>
+			<article className="prose prose-neutral max-w-none">
+				{page ? (
+					<div dangerouslySetInnerHTML={{ __html: page.html }} />
+				) : (
+					<p>Content coming soon.</p>
+				)}
+			</article>
 		</main>
-	)
+	);
 }
 

@@ -2,32 +2,38 @@ import Link from "next/link";
 
 export default function SiteFooter() {
   return (
-      <footer className="bg-gray-100 border-t py-6 text-center text-sm text-gray-500">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
-          <p>© {new Date().getFullYear()} Digital PIN LLC — All rights reserved.</p>
-          <div className="flex gap-4 mt-3 md:mt-0">
-            <Link href="/legal" className="hover:text-brand-600">
-              Legal
-            </Link>
-            <Link href="https://github.com/Digital-Pins" target="_blank" className="hover:text-brand-600">
-              GitHub
-            </Link>
-            <Link href="/portal" className="hover:text-brand-600">
-              Client Portal
-            </Link>
-            <Link href="#contact" className="hover:text-brand-600">
-              Contact
-            </Link>
-                      <a
-            className="text-brand-300 hover:text-brand-200"
-            href="/docs/Digital%20PIN%20Company%20Profile%20Booklet.pdf"
+    <footer className="border-t bg-white/70 backdrop-blur-md">
+      <div className="container mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-gray-600">
+          © {new Date().getFullYear()} DigitalPin. All rights reserved.
+        </p>
+        <nav className="flex items-center gap-6 text-sm">
+          <Link href="/#solutions" className="hover:text-brand-600">
+            Solutions
+          </Link>
+          <Link href="/#partners" className="hover:text-brand-600">
+            Partners
+          </Link>
+          <Link href="/#contact" className="hover:text-brand-600">
+            Contact
+          </Link>
+          <Link href="/legal" className="hover:text-brand-600">
+            Legal
+          </Link>
+          <Link href="/placement-group" className="hover:text-brand-600">
+            Placement Group
+          </Link>
+          {/* Update: direct external link to WebPortal */}
+          <a
+            href="https://erp.digitalpin.online/public/webportal/index.php"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            className="font-medium text-brand-700 hover:text-brand-600"
           >
-            Company Profile (PDF)
-             </a>
-          </div>
-        </div>
-      </footer>
+            Client Portal
+          </a>
+        </nav>
+      </div>
+    </footer>
   );
 }
