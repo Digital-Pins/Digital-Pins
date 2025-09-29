@@ -66,13 +66,16 @@ if (empty($dolibarr_nocache)) {
 }
 
 $webPortalTheme = new WebPortalTheme();
+// Compute root URL for assets (scheme-agnostic)
+require_once DOL_DOCUMENT_ROOT . '/webportal/class/context.class.php';
+$rootUrl = Context::getRootConfigUrl();
 
 ?>
 [data-theme="custom"], :root{
 	--primary-color-hue: <?php print $webPortalTheme->primaryColorHsl['h']; ?>;
 	--primary-color-saturation: <?php print $webPortalTheme->primaryColorHsl['s']; ?>%;
 	--primary-color-lightness: <?php print $webPortalTheme->primaryColorHsl['l']; ?>%;
-	--banner-background: url(<?php print !empty($webPortalTheme->bannerBackground) ? $webPortalTheme->bannerBackground : '../img/banner.svg' ?>);
+	--banner-background: url(<?php print !empty($webPortalTheme->bannerBackground) ? $webPortalTheme->bannerBackground : $rootUrl.'img/banner.svg' ?>);
 }
 
 .login-page {

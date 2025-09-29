@@ -308,14 +308,25 @@ class Context
 	{
 		global $conf;
 
-		// Init de l'url de base
+		// Initialize base URL
 		if (getDolGlobalString('WEBPORTAL_ROOT_URL')) {
 			$rootUrl = getDolGlobalString('WEBPORTAL_ROOT_URL');
 			if (substr($rootUrl, -1) !== '/') {
 				$rootUrl .= '/';
 			}
+
+			// Normalize scheme to match current request to avoid mixed-content
+			$isHttps = (
+				(!empty($_SERVER['HTTPS']) && strtolower((string) $_SERVER['HTTPS']) !== 'off')
+				|| (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && stripos((string) $_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+				|| (!empty($_SERVER['REQUEST_SCHEME']) && strtolower((string) $_SERVER['REQUEST_SCHEME']) === 'https')
+			);
+			if ($isHttps && stripos($rootUrl, 'http://') === 0) {
+				$rootUrl = 'https://' . substr($rootUrl, 7);
+			}
 		} else {
-			$rootUrl = dol_buildpath('/public/webportal/', 2);
+			// Use path relative to host to be scheme-agnostic (works with HTTP/HTTPS and reverse proxies)
+			$rootUrl = dol_buildpath('/public/webportal/', 1);
 		}
 
 		return $rootUrl;

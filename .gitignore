@@ -1,17 +1,40 @@
-# Node / Next.js
+## Node / Next.js
 node_modules/
 .next/
-*.log
-.env*
+out/
+.next-standalone/
 
-# PHP/Dolibarr
+## Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+## Env
+.env*
+!.env.example
+
+## Editors/OS
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+## Misc build/test
+coverage/
+dist/
+*.tgz
+
+## PHP/Dolibarr
 htdocs/documents/
 htdocs/conf/conf.php
 htdocs/custom/
 vendor/
 composer.lock
 
-# OS/editor
-.DS_Store
-.vscode/
-.idea/
+## Archives and backups (suppress noisy untracked data)
+*.tar.gz
+customer-portal.archive.tar.gz
+htdocs.pre-*/

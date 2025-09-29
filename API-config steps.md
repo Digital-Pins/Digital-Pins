@@ -49,19 +49,24 @@
 
 ## 2) ربط المفتاح بالبوابة (customer-portal)
 
-1. إعداد ملف البيئة للإنتاج
-   - حرّر الملف customer-portal/.env.production.local وضع القيم:
-     - DOL_API_BASE=https://erp.digitalpin.online/api/index.php
-     - DOL_API_KEY=<API_KEY>
-     - NEXTAUTH_URL=https://app.digitalpin.online
-     - NEXTAUTH_SECRET=<سِر عشوائي قوي> (يفضّل أحرف خاصة؛ إن استخدمت EnvironmentFile لـ systemd، ضعه بين علامتي اقتباس)
+1. استخدام عكس بروكسي مرن عبر Nginx (موصى به)
+    - أضفنا مسارًا عكسيًا تحت https://digitalpin.online/erp-api/** يقوم بإعادة توجيه الطلبات إلى:
+       - https://erp.digitalpin.online/api/index.php/**
+    - يدعم CORS لأصول digitalpin.online ويُمِرّر هيدر DOLAPIKEY كما هو.
+    - مثال: GET https://digitalpin.online/erp-api/invoices?limit=1 مع الهيدر DOLAPIKEY.
 
-2. إعادة تشغيل خدمة البوابة
+2. إعداد ملف البيئة للتطبيقات التي تستهلك API
+    - إن كنت تستخدم التطبيق Next.js (الذي يعمل لدينا)، استخدم:
+       - DOL_API_BASE=https://digitalpin.online/erp-api
+       - DOL_API_KEY=<API_KEY>
+    - يضمن ذلك عدم تسريب نطاق مضيف ERP مباشرة للعميل وإتاحة التحكم على CORS من Nginx.
+
+3. إعادة تشغيل خدمة البوابة
    - تعمل البوابة بوضع Next.js standalone وتحمّل .env.production.local في وقت التشغيل عبر dotenv، لذا يكفي إعادة التشغيل.
    - بعد الإعادة، اختبر:
      - https://app.digitalpin.online/api/invoices → يجب أن يعيد JSON بدل 403.
 
-3. أمان جيد مُستحسن
+4. أمان جيد مُستحسن
    - أقل صلاحيات ممكنة لحساب الخدمة.
    - تدوير دوري لمفتاح API عند الحاجة.
    - لا تضع المفاتيح في Git؛ استخدم ملفات .env المحلية و/أو مخزن أسرار.
@@ -72,6 +77,7 @@
 
 - 403 من ERP مباشرة: المفتاح صحيح لكن الصلاحيات ناقصة → عدّل أذونات المستخدم/المجموعة.
 - 401 من ERP: لم يُقرأ المفتاح → تأكد من استخدام اسم الهيدر الصحيح DOLAPIKEY أو بارامتر DOLAPIKEY.
+- 403 عبر /erp-api: تأكد أن الهيدر DOLAPIKEY يُرسل، أو أن CORS يسمح للمصدر (Origin) الحالي (النطاق يجب أن يكون ضمن digitalpin.online).
 - 404 على explorer: راجع إعداد PATH_INFO في Nginx/PHP.
 - ما زالت البوابة تعيد 500: تأكد من وجود DOL_API_BASE وDOL_API_KEY في .env.production.local وإعادة تشغيل الخدمة.
 
@@ -82,12 +88,16 @@
 استبدل <API_KEY> بالقيمة الفعلية:
 
 ```
-# اختبار عبر الهيدر (مفضل)
+# اختبار عبر الهيدر (مفضل) — مباشرة إلى ERP
 curl -H "DOLAPIKEY: <API_KEY>" \
-  "https://erp.digitalpin.online/api/index.php/invoices?limit=1"
+   "https://erp.digitalpin.online/api/index.php/invoices?limit=1"
 
 # بديل عبر بارامتر الاستعلام
 curl "https://erp.digitalpin.online/api/index.php/invoices?limit=1&DOLAPIKEY=<API_KEY>"
+
+# عبر العكس بروكسي (موصى به من تطبيقات الويب ضمن digitalpin.online)
+curl -H "DOLAPIKEY: <API_KEY>" \
+   "https://digitalpin.online/erp-api/invoices?limit=1"
 ```
 
 إذا عاد 403، راجع قسم الأذونات في الخطوة (1-4).

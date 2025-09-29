@@ -24,7 +24,7 @@ global $langs;
 		?>
 	</title>
 	<link rel="stylesheet" href="<?php print $context->rootUrl.'css/global.css.php'; ?>">
-	<link rel="stylesheet" href="<?php print $context->rootUrl.'css/themes/custom.css.php'; ?>">
+	<link rel="stylesheet" href="<?php print $context->rootUrl.'css/themes/custom.css.php?revision='.getDolGlobalInt('WEBPORTAL_PARAMS_REV'); ?>">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 	<?php
